@@ -21,8 +21,7 @@ import gym_donkeycar
 import numpy as np
 
 # SET UP ENVIRONMENT
-# You can also launch the simulator separately
-# in that case, you don't need to pass a `conf` object
+# You can also launch the simulator separately in that case, you don't need to pass a `conf` object
 exe_path = f"{PATH_TO_APP}/donkey_sim.exe"
 port = 9091
 
@@ -66,7 +65,7 @@ Action space
 
 A permissable action is a numpy array of length two with first steering and throttle, respectively. E.g. np.array([0,1]) goes straight at full speed, np.array([-5,1]) turns left etc.
 
-# Action Space: Box(2,)
+# Action Space:
 
 Action names: ['steer', 'throttle']
 
@@ -96,27 +95,6 @@ Example info:
 "donkey-waveshare-v0"
 "donkey-minimonaco-track-v0"
 "donkey-warren-track-v0"
-Codestyle
-
-We are using black codestyle (max line length of 127 characters) together with isort to sort the imports.
-
-Please run make format to reformat your code. You can check the codestyle using make check-codestyle and make lint.
-
-Tests
-
-Type checking with pytype:
-
-make type
-Codestyle check with black, isort and flake8:
-
-make check-codestyle
-make lint
-To run pytype, format and lint in one command:
-
-make commit-checks
-Build the documentation:
-
-make docs
 # Credits
 
 Original Source Code
